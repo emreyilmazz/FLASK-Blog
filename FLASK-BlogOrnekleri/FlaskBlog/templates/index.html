@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class = "jumbotron text-center" >
+
+        <h3>Yazılım Bloğumuza Hoşgeldiniz.</h3>
+</div>
+
+{% if sayi == 1 %}
+    <p>1. İşlem</p>
+{% elif sayi == 2 %}
+<p>2. İşlem</p>
+{% elif sayi == 3 %}
+<p>3. İşlem</p>
+{% else %}
+    <p>Geçersiz işlem.</p>
+
+{% endif %}
+
+<ul>
+{% for soz in sozluk %}
+    <li>Sozluk id : {{soz.id}} sozluk name : {{soz.name}} sozluk sınıf : {{soz.class}}</li>
+{% endfor %}
+
+</ul>
+
+    
+
+{% endblock %}

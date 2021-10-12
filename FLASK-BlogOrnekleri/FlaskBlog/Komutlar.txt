@@ -1,0 +1,1 @@
+set FLASK_APP=blog.py     -> ilgili .py dosyasını root dosya seçer ve flask run scripti ile app'i başlatır

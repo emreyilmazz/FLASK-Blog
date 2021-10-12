@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+<h3>Kayıt Olun</h3>
+<hr>
+
+<form method = "post" action="{{url_for('giris')}}">
+    {{ render_field(form.name,class = "form-control") }} <!--Form kontrol clası ile text alanlarını genişlettik.  -->
+    {{ render_field(form.username,class = "form-control") }}
+    {{ render_field(form.email,class = "form-control") }}
+    {{ render_field(form.password,class = "form-control") }}
+    {{ render_field(form.confirm,class = "form-control") }}
+    <button type="submit" class="btn btn-primary ">Kayıt Ol</button>  <!--Butona bastığımız zaman post request yapacağı için type = submit olarak değiştirdik. -->
+</form>
+
+{% endblock %}

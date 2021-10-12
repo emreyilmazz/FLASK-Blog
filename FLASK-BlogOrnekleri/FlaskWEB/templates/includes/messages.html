@@ -1,0 +1,13 @@
+
+<!-- https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/  "5. kısım" -->
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}}" role="alert">  <!-- Boostrapden alert aldık. -->
+        {{message}}
+      </div>
+    {% endfor %}
+
+  {% endif %}
+{% endwith %}

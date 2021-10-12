@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/plugins.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Toast/toast.min.css')}}" />
+<script src="{{url_for('static',filename='Toast/toast.min.js')}}"></script>
+
+{%block custom_css %}
+{% endblock custom_css %}
+    <title>Blog Sayfası</title>
+</head>
+<body>
+    
+    {% include "includes/navbar.html" %}  <!-- Başka bir html sayfasını include komutu ile dahil ettik. -->
+    <br><br><br><br>
+    <div class = "container">
+        {% block body %}
+   
+           
+        {% endblock body %}
+
+    </div>
+
+
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- SCRIPTS -->
+    <script src="{{ url_for('static',filename='js/jquery.js')}}"></script>
+    <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
+    <script src="{{ url_for('static',filename='js/plugins.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/init.js')}}"></script>
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+905308626253", // WhatsApp numaranızı buraya girin
+                call_to_action: "Merhaba, nasıl yardımcı olabilirim?", // Görünecek metin
+                position: "right", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    
+    {%block custom_js %}
+    {%endblock custom_js %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class = "jumbotron text-center" >
+
+    <h3>Yazılım Bloğumuza Hoşgeldiniz.</h3>
+    <p>Bu blogta beğendiğiniz tasarımları kendi web siteniz için oluşturabilirsiniz.</p>
+
+</div>
+    {% if islem == 1 %}
+        <p>Cevap 1.</p>
+    {% elif islem == 2%}  
+        <p>Cevap 2.</p>
+    {% elif islem == 3%}  
+        <p>Cevap 3.</p>
+    {% else  %}
+        <p>Geçersiz İşlem...</p>
+    {% endif %}
+
+
+{% endblock body %}

@@ -1,0 +1,2 @@
+Veri tabanında bir tablo açmak için terminalde sqlite3 todo.db (oluşturmak istediğimiz tablonun ismi)
+Ardından .tables diyoruz ve oluşturduğumuz veri tabanını görerek tablomuzu bu 2 adımı kullanarak oluşturmuş oluyoruz.
